@@ -1,5 +1,6 @@
 import express from "express";
 import "dotenv/config";
+import helmet from "helmet";
 import router from "./app/router.js";
 
 // environment variables
@@ -10,6 +11,9 @@ const SERVER_URL = `${SERVER_DOMAIN}:${SERVER_PORT}`;
 
 // create an express application
 const app = express();
+
+// security headers with helmet
+app.use(helmet());
 
 // serving all files from "integration" folder as static
 app.use(express.static("docs/integration"));

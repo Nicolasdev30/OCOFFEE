@@ -18,7 +18,7 @@
         </p>
         <p>
         <p>
-          <% product.categories.forEach((category, i)=> { %><%-category%><%- i < product.categories.length - 1 ? ','
+          <% product.categories.forEach((category, i)=> { %><%=category%><%= i < product.categories.length - 1 ? ','
                 : '' %>
                 <% }) %>
         </p>
