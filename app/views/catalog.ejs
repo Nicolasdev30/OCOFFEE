@@ -1,0 +1,15 @@
+<%- include('partials/head')%>
+  <section id="catalog">
+    <h1>Notre catalogue</h1>
+
+    <div class="articles only-display-3-articles" id="articles-list">
+      <% for (const product of locals.coffeeProducts) { %>
+        <%- include('partials/catalog-coffee-card', { product })%>
+          <% } %>
+    </div>
+    <button class="button" id="see-all-products-button">
+      Voir tous les produits
+    </button>
+  </section>
+  <script defer src="/js/catalog.js"></script>
+  <%- include('partials/foot')%>

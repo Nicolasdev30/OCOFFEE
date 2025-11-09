@@ -1,0 +1,67 @@
+section.coffee-details h1 {
+  padding: 4.5rem;
+  background-image: url(../images/coffees/256505890.png);
+  border-radius: 0.5rem;
+
+  text-align: center;
+  font-size: 2rem;
+  margin: 5rem 0;
+}
+
+section.coffee-details article {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 0.5rem;
+}
+
+section.coffee-details article img {
+  height: 50dvh;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+section.coffee-details article div {
+  padding: 2rem;
+}
+
+section.coffee-details article h2{
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 2rem;
+  position: relative;
+}
+section.coffee-details article h2 .out-of-stock {
+  border-radius: 2rem;
+
+  font-size: 0.8rem;
+  color: var(--color-cream);
+  border: 1px solid var(--color-dark);
+  border-radius: 5rem;
+
+  position: absolute;
+
+  padding: 0.4rem 0.8rem;
+  margin-left: 1rem;
+}
+section.coffee-details article h2 .out-of-stock:hover {
+  color: var(--color-orange);
+  border-color: var(--color-orange);
+  background-color: var(--color-cream);
+
+  transition: all 0.3s ease-in-out;
+
+}
+section.coffee-details article p {
+  font-style: italic;
+  text-align: end;
+}
+
+section.coffee-details article .coffee-description {
+  font-style: inherit;
+  line-height: 1.5rem;
+  margin: 3rem 0;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  text-align: justify;
+}

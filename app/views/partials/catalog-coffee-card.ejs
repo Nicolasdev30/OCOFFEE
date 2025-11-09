@@ -1,0 +1,14 @@
+<article>
+  <img src="/images/coffees/<%= product.reference %>.png" alt="<%= product.name %>" />
+  <div>
+    <h2>
+      <%= product.name %>
+    </h2>
+    <p>Origine <%= product.country %>
+    </p>
+    <p>
+      <%= product.price_per_kg %> €/kg
+    </p>
+    <a class="button-outline" href="/catalog/<%= product.id %>">Voir le détail</a>
+  </div>
+</article>

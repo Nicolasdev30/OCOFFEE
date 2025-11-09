@@ -1,0 +1,36 @@
+<%- include('partials/head')%>
+  <section id="add-coffee">
+    <h1>Ajouter un café</h1>
+    <div id="form-container">
+      <form method="POST" enctype="multipart/form-data">
+        <label for="name">Nom</label>
+        <input class="input" required type="text" name="name" id="name">
+        <label for="reference">Reference</label>
+        <input class="input" required type="text" name="reference" id="reference">
+        <label for="description">Description</label>
+        <textarea class="input" name="description" id="description"></textarea>
+        <label for="price_per_kg">Prix au kilo</label>
+        <input class="input" type="number" step=".01" required type="text" name="price_per_kg" id="price_per_kg">
+        <label for="country">Origine</label>
+        <select required name="country" id="country">
+          <% for(const country of countries) { %>
+            <option value="<%=  country.id %>">
+              <%= country.name %>
+            </option>
+            <% } %>
+        </select>
+        <label for="categories">Saveurs</label>
+        <select required multiple name="categories" id="categories">
+          <% for(const category of categories) { %>
+            <option value="<%=  category.id %>">
+              <%= category.name %>
+            </option>
+            <% } %>
+        </select>
+        <label for="coffee-image">Image</label>
+        <input class="input" type="file" name="coffee-image" id="coffee-image" />
+        <button class="button" type="submit">Enregistrer</button>
+      </form>
+    </div>
+  </section>
+  <%- include('partials/foot') %>

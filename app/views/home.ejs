@@ -1,0 +1,24 @@
+<%- include('partials/head')%>
+  <section id="about">
+    <div>
+      <h1>Votre spécialiste Haucloquois du café</h1>
+      <p>oCoffee est un détaillant de café et de produits associés à la consommation du café basé dans la ville de
+        Hauts-de-Cloques. Nous importons nos produits directement des producteurs, et nous les sélectionnons selon des
+        critères exigeants de qualité. oCoffee est reconnu à l'échelle départementale.</p>
+      <a class="button" href="/catalog">Découvrir notre catalogue</a>
+    </div>
+    <img src="/images/about.jpg" alt="Selection de nos meilleurs cafés oCoffee">
+  </section>
+
+  <section id="latest-products">
+    <h2>Nouveautés</h2>
+
+    <ul>
+      <% for (const product of locals.coffeeProducts) { %>
+        <li>
+          <%- include('partials/latests-coffee-card', { product })%>
+        </li>
+        <% } %>
+    </ul>
+  </section>
+  <%- include('partials/foot')%>

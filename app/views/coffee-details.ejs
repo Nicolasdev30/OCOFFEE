@@ -1,0 +1,32 @@
+<%- include('partials/head') %>
+  <section class="coffee-details">
+    <h1>Détail du produit</h1>
+    <article>
+      <img src="/images/coffees/<%= product.reference %>.png" alt="<%= product.name %>" />
+      <h2>
+        <%= product.name %>
+          <% if(!product.available) { %>
+            <span class="out-of-stock">rupture de stock</span>
+            <% } %>
+      </h2>
+      <div>
+        <p>
+          Origine <%= product.country %>
+        </p>
+        <p>
+          <%= product.price_per_kg %> €/kg
+        </p>
+        <p>
+        <p>
+          <% product.categories.forEach((category, i)=> { %><%-category%><%- i < product.categories.length - 1 ? ','
+                : '' %>
+                <% }) %>
+        </p>
+
+        <p class="coffee-description">
+          <%= product.description %>
+        </p>
+      </div>
+    </article>
+  </section>
+  <%- include('partials/foot') %>
